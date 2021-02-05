@@ -1,0 +1,32 @@
+{
+    "name": "llamalang",
+    "displayName": "Llamalang",
+    "description": "Llamalang support",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.53.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "llamalang",
+            "aliases": ["LlamaLang", "llamalang"],
+            "extensions": [".llang"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "llamalang",
+            "scopeName": "source.llang",
+            "path": "./syntaxes/llamalang.tmLanguage.json"
+        }],
+        "themes": [
+            {
+              "label": "Dark Moskito",
+              "uiTheme": "vs-dark",
+              "path": "./themes/llamalang.tmTheme.json"
+            }
+          ]
+    }
+}

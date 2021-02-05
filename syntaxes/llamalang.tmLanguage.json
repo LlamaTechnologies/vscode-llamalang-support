@@ -1,0 +1,77 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "LlamaLang",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#control-keywords"
+		},
+		{
+			"include": "#types"
+		},
+		{
+			"include": "#built-in-constant"
+		},
+		{
+			"include": "#compiler-directive"
+		},
+		{
+			"include": "#tags"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"control-keywords": {
+			"patterns": [{
+				"name": "keyword.control.llamalang",
+				"match": "\\b(if|elif|else|switch|for|foreach|return|continue|break|case)\\b"
+			}]
+		},
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.other.llamalang",
+				"match": "\\b(func|namespace|using)\\b"
+			}]
+		},
+		"types": {
+			"patterns": [{
+				"name": "storage.type.llamalang",
+				"match": "\\b(void|bool|byte|int8|uint8|int16|uint16|int32|uint32|int64|uint64|float32|float64|string|error|prot|union|tag|enum)\\b"
+			}]
+		},
+		"built-in-constant": {
+			"patterns": [{
+				"name": "constant.language.llamalang",
+				"match": "\\b(true|false)\\b"
+			}]
+		},
+		"compiler-directive": {
+			"patterns": [{
+				"name": "compiler.llamalang",
+				"match": "^[#][a-z]+"
+			}]
+		},
+		"tags": {
+			"patterns": [{
+				"name": "tags.llamalang",
+				"match": "[@][A-Za-z]+"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.llamalang",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.llamalang",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.llang"
+}
