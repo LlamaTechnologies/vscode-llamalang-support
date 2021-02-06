@@ -105,6 +105,17 @@
 			</dict>
 			<dict>
 				<key>name</key>
+				<string>Method Owner</string>
+				<key>scope</key>
+				<string>method.owner</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#00AAFF</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>name</key>
 				<string>Tags</string>
 				<key>scope</key>
 				<string>tags</string>
