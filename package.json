@@ -13,20 +13,13 @@
         "languages": [{
             "id": "llamalang",
             "aliases": ["LlamaLang", "llamalang"],
-            "extensions": [".llang"],
+            "extensions": [".llama"],
             "configuration": "./language-configuration.json"
         }],
         "grammars": [{
             "language": "llamalang",
-            "scopeName": "source.llang",
+            "scopeName": "source.llama",
             "path": "./syntaxes/llamalang.tmLanguage.json"
-        }],
-        "themes": [
-            {
-              "label": "Dark Moskito",
-              "uiTheme": "vs-dark",
-              "path": "./themes/llamalang.tmTheme.json"
-            }
-          ]
+        }]
     }
 }
